@@ -177,6 +177,13 @@ TARGET_LINUX_KERNEL_VERSION := 3.18
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos7870
 TARGET_KERNEL_CONFIG := exynos7870-on7xelteswa_defconfig
 
+# Clang
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_VERSION := 3.18
+TARGET_KERNEL_CLANG_VERSION := r353983c1
+TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
+
+
 # Custom mkbootimg from hardware/samsung
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
